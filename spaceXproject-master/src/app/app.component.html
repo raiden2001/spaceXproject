@@ -1,0 +1,8 @@
+<h1 class="mainHeading">{{ title }}</h1>
+<app-header [dataFromApp]=year ></app-header>
+<div class="content">
+   <button mat-raised-button color="accent">refresh</button>
+  <router-outlet></router-outlet>
+  Data emitted from footer component: {{ childData}}
+  <app-footer (dataEmitter)= "captureEmittedData($event)"></app-footer>
+</div>
