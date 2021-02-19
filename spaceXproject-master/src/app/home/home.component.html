@@ -1,0 +1,25 @@
+<div *ngIf="info; else showloading">
+  <h2 class=cardleft> Welcome SpaceX</h2>
+  <mat-card *ngFor="let info1 of info">
+  <mat-card-header>
+      <mat-card-title>{{ info1.title }}</mat-card-title>
+      <mat-card-subtitle>Flight number: {{info1.flight_number}}</mat-card-subtitle>
+
+  </mat-card-header>
+  <mat-card-content class=cardleft>
+    <p>{{ info1.details}}</p>
+
+
+  </mat-card-content>
+
+</mat-card>
+
+</div>
+
+<!-- getting indeterinates -->
+
+<ng-template #showLoading>
+  <div class="loadingSpinner">
+    <mat-progress-spinner mode= "indeterminate"></mat-progress-spinner>
+</div>
+</ng-template>
